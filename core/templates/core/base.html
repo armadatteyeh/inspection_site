@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Inspection Science et gestion</title>
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-black">
+  <div class="container-fluid">
+
+    <!-- Logo -->
+    <a class="navbar-brand text-white" href="#">DJIB_INSPECTION</a>
+
+    <!-- Bouton mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menu -->
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'accueil' %}">Accueil</a>
+        </li>
+
+        <!-- Collège -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+            COLLÈGE
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">resources pédagogies</a></li>
+            <li><a class="dropdown-item" href="{% url 'sixieme' %}">6ème infos</a></li>
+            <li><a class="dropdown-item" href="{% url 'septieme' %}">7ème infos</a></li>
+            <li><a class="dropdown-item" href="{% url 'huitieme' %}">8ème infos</a></li>
+            <li><a class="dropdown-item" href="{% url 'neuvieme' %}">9ème infos</a></li>
+          </ul>
+        </li>
+
+        <!-- seconde -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+            Infos lycée
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">resources pédagogies</a></li>
+            <li><a class="dropdown-item" href="{% url 'seconde' %}">2nd infos</a></li>
+          </ul>
+        </li>
+
+        <!-- GFM -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+            GFM
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">resources pédagogies</a></li>
+            <li><a class="dropdown-item" href="{% url 'premiere_gfm' %}">Premiere_GFM</a></li>
+             <li><a class="dropdown-item" href="{% url 'terminal_gfm' %}">Terminal GFM</a></li>
+          </ul>
+        </li>
+
+        <!-- OGRH -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+            OGRH
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">resources pédagogies</a></li>
+            <li><a class="dropdown-item" href="{% url 'premiere_ogrh' %}">1ere OGRH</a></li>
+             <li><a class="dropdown-item" href="{% url 'terminal_ogrh' %}">Terminal OGRH</a></li>
+          </ul>
+        </li>
+
+        <!-- IAG-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" data-bs-toggle="dropdown">
+            IAG
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">resources pédagogies</a></li>
+            <li><a class="dropdown-item" href="{% url 'premiere_iag' %}">1ere IAG</a></li>
+             <li><a class="dropdown-item" href="{% url 'terminal_iag' %}">Terminal IAG</a></li>
+          </ul>
+        </li>
+
+        <!-- TICE -->
+        <li class="nav-item">
+          <a class="nav-link text-white" href="{% url 'tice' %}">TICE</a>
+        </li>
+
+
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contenu -->
+<div class="container mt-4">
+    {% block content %}{% endblock %}
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+
+<footer class="footer mt-5">
+    <div class="container">
+        <div class="row">
+
+            <!-- Colonne 1 -->
+            <div class="col-md-4">
+                <h5>DJIB_INSPECTION SCIENCE ET GESTION</h5>
+                <p>Plateforme pédagogique pour l'inspection de science et gestion.</p>
+            </div>
+
+            <!-- Colonne 2 -->
+            <div class="col-md-4">
+             <div class="text-center">
+    <p>👁️ Nombre Visiteurs du site est : {{ visites }}</p>
+</div>
+            </div>
+
+            <!-- Colonne 3 -->
+            <div class="col-md-4">
+                <h5>Contact</h5>
+                <p>Email : inspection@gmail.com</p>
+                <p>Téléphone : +253 XX XX XX XX</p>
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="text-center">
+            <p>© 2026 DJIB_INSPECTION SCIENCE ET GESTION - Tous droits réservés</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

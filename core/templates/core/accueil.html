@@ -1,0 +1,133 @@
+{% extends 'core/base.html' %}
+
+{% block content %}
+
+<div class="container">
+
+    <!-- TITRE -->
+    <div class="text-center mb-5">
+        <h1 class="title animate-title">
+            BIENVENUE SUR CE SITE SCIENCE ET GESTION
+        </h1>
+    </div>
+
+    <!-- TEXTE -->
+    <div class="content-box fade-in">
+
+        <p>
+            Bienvenue sur notre site dédié à l'inspection de physique-chimie pour le moyen et secondaire général et technique.
+            Ici, nous plaçons l'excellence pédagogique au cœur de notre mission.
+        </p>
+
+        <p>
+            Que vous soyez enseignant, élève ou parent, ce site vous offre des ressources, des conseils et des outils
+            pour une meilleure compréhension des sciences physiques et chimiques.
+        </p>
+
+        <p>
+            Notre équipe d'inspecteur et conseiller(e)s expérimentés travaille en étroite collaboration avec les établissements scolaires.
+        </p>
+
+        <p>
+            Nous mettons à disposition des guides méthodologiques, fiches de préparation et exemples d’évaluations.
+        </p>
+
+        <p>
+            Vous trouverez également des formations, webinaires et ressources multimédias.
+        </p>
+
+        <p>
+            Nous croyons que la science doit être accessible, passionnante et utile pour comprendre le monde.
+        </p>
+
+    </div>
+
+    <!-- ÉQUIPE -->
+    <div class="team-section mt-5 fade-in">
+
+        <h2 class="text-center mb-4">👨‍🏫 Équipe de l'inspection</h2>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <div class="team-card">
+                    <strong>HODAN ISSE</strong><br>
+                    Inspectrice<br>📞 77 81 41 67
+                </div>
+
+                <div class="team-card">
+                    <strong>HIBO ABDILLAHI ADEN </strong><br>
+                    Conseillére pédagogique reférent informatique<br>📞 77 81 52 79
+                </div>
+
+                <div class="team-card">
+                    <strong>ALI AHMED GUIRREH</strong><br>
+                    Conseiller pédagogique<br>📞 77 81 20 47
+                </div>
+
+                <div class="team-card">
+                    <strong>MOHAMED DAHER GUIRREH</strong><br>
+                    Conseiller pédagogique<br>📞 77 81 76 61
+                </div>
+
+            </div>
+
+            <div class="col-md-6">
+
+                <div class="team-card">
+                    <strong>ELMI FOURREH IBRAHIM</strong><br>
+                    Conseiller pédagogique<br>📞 77 84 32 46
+                </div>
+
+                <div class="team-card">
+                    <strong>SAADA AHMED HOUSSEIN</strong><br>
+                    Conseiller pédagogique<br>📞 77 03 54 50
+                </div>
+
+                <div class="team-card">
+                    <strong>FATOUMA ALI MOHAMED</strong><br>
+                    Conseiller pédagogique<br>📞 77 64 43 59
+                </div>
+
+                <div class="team-card">
+                    <strong>YAZINE ZEID MOHSEIN</strong><br>
+                    Conseiller pédagogique<br>📞 77 68 68 50
+                </div>
+
+                <div class="team-card">
+                    <strong>TAMER MOHAMED SALEH</strong><br>
+                    Conseiller pédagogique<br>📞 77 71 53 23
+                </div>
+
+                <div class="team-card">
+                    <strong>MOHAMED AHMED ILTIREH</strong><br>
+                    Conseiller pédagogique<br>📞 77 43 64 18
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- SCRIPT ANIMATION -->
+<script>
+const elements = document.querySelectorAll('.fade-in');
+
+window.addEventListener('scroll', () => {
+    elements.forEach(el => {
+        const position = el.getBoundingClientRect().top;
+        const screenHeight = window.innerHeight;
+
+        if (position < screenHeight - 100) {
+            el.style.opacity = 1;
+            el.style.transform = 'translateY(0)';
+        }
+    });
+});
+</script>
+
+{% endblock %}
